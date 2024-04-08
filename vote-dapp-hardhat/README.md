@@ -22,3 +22,11 @@ Transaction hash: 0x7d6455c922a2f0178fe5e433d256b2baa5065276bd2f4ca098d3954bad7d
 TokenizedBallot contract deployed to: 0x9e7dc22c3e2072424dfc1c099d44ecefafb080c2
 ```
 
+### Minting Tokens
+Transaction hash: 0x6862c7ed6fc3fd971d19b253d47978ca83137afbc9777ca5c336d382bcbca256
+
+```typescript
+npx ts-node --files ./scripts/MintToken.ts <receipt-address> <amount>
+npx ts-node --files ./scripts/MintToken.ts 0x4A8E770a33631Bb909c424CaA8C48BbC28Be96b1 500
+```
+
