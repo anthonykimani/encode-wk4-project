@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.24;
+pragma solidity >=0.7.0 <0.9.0;
 
 interface IMyToken {
     function getPastVotes(address, uint256) external view returns (uint256);
@@ -17,7 +17,7 @@ contract TokenizedBallot {
     mapping(address => uint256) public votePowerSpent;
 
     constructor(
-        bytes32[] memory _proposalNames,
+        bytes32[3] memory _proposalNames,
         address _tokenContract,
         uint256 _targetBlockNumber
     ) {
