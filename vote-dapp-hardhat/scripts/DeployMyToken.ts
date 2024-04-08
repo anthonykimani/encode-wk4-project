@@ -1,6 +1,4 @@
-import {
-  formatEther,
-} from "viem";
+import { formatEther } from "viem";
 import { abi, bytecode } from "../artifacts/contracts/MyToken.sol/MyToken.json";
 import { createClients } from "./helpers";
 
@@ -22,23 +20,22 @@ async function main() {
   );
 
   //  use viem's deploycontract function to deploy
-  console.log("\nDeploying Ballot contract");
+  console.log("\nDeploying MyToken contract");
   const hash = await deployer.deployContract({
     abi: abi,
     bytecode: bytecode as `0x${string}`,
   });
 
   // Get Contract Hash
-  console.log("Transaction hash:", hash);
+  console.log("\nTransaction hash:", hash);
   console.log("Waiting for confirmations...");
 
   // Get Contract Address
   const txReceipt = await publicClient.waitForTransactionReceipt({ hash });
-  console.log("MyToken contract deployed to:", txReceipt.contractAddress);
+  console.log("\nMyToken contract deployed to:", txReceipt.contractAddress);
 }
 
 main().catch((error) => {
-    console.error(error);
-    process.exitCode = 1;
-  });
-  
+  console.error(error);
+  process.exitCode = 1;
+});
