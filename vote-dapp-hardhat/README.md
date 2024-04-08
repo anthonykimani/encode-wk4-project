@@ -1,13 +1,12 @@
-# Sample Hardhat Project
+### Deploying Tokenized Ballot contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
+```typescript
+Transaction hash: 0xa7073fcf01389a7abd53f4b108098e4402543038a1f41e8a94a812e5ada22a1b
 ```
+
+### Waiting for confirmations...
+
+```typescript
+MyToken contract deployed to: 0x86491e2487b1909b2e6b8493e081a18ee5c1005a
+```
+
